@@ -7,14 +7,28 @@ body{
 }
 .con{
 	width: 300px;
-	margin: 150px auto;
-	position: relative;
-}
-.bg{
-	height: 100%;
-	width: 100%;
 	opacity: 1;
 	border-radius: 10px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -150px;
+}
+#con_signin{
+	display: none;
+}
+.clear{
+	clear: both;
+}
+.bg{
+	width: 300px;
+	height: 500px;
+	opacity: 1;
+	border-radius: 10px;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -150px;
 }
 .bg img{
 	width: 100%;
@@ -23,23 +37,55 @@ body{
 }
 .con_title{
 	top: 10px;
-	position: absolute;
+	/*position: absolute;*/
 	width: 200px;
 	margin-left: 50px auto;
 	text-align: center;
+	margin-top:20px;
+	margin-bottom: 20px; 
+}
+.logo{
+	margin-left:50px; 
+	background: pink;
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+}
+.logo img{
+	margin: 15px;
+	height: 70px;
+	width: 70px;
 }
 .con_tab{
+	background: #ff728b;
 	top: 100px;
-	position: absolute;
+	/*position: absolute;*/
+	padding: 0;
 	width: 200px;
-	margin-left: 50px;
 	text-align: center;
 	height: 50px;
-	background: #fff;
+	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 0 0 0 -2px #FEEAC5, 0 0 0 -1px #ff728b;
+}
+.con_tab span{
+	width: 50%;
+	height: 30px;
+	color: #fff;
+	display: inline-block;
+	border-spacing: 0;
+	vertical-align: middle;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom: -5px; 
+	margin:7.5px -3px 10px -3px;
+}
+.sign_in{
+	border-right: 2px solid #fff;
 }
 .con_panel{
-	position: absolute;
-	bottom:60px;
+	/*position: absolute;
+	margin-top:500px;*/
 	left: 50px;
 	margin: 0 auto;
 	width: 200px;
@@ -48,15 +94,129 @@ body{
 	font-size: 1.3em;
 	background: url(../images/background.jpg);
 	height: 50px;
-	border: 1px solid pink;
+	border: 1px solid #ff97a9;
 	margin-top: 20px;
 	width: 200px;
 	font-style: '';
 }
-.submit-btn{
-	background: #fff;
-	height: 50px;
-	border-radius: 25px;
-	margin-top:50px; 
-	border: 2px solid pink;
+.submit-btn {
+  display: inline-block;
+  /*position: absolute;*/
+  height: 40px;
+  top:100px;
+  left: 90px;
+  width: 100px;
+  margin: 15px 15px 0;
+/*  padding: .5em 1em;*/
+  font-size: 1.25rem;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ff728b;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 0 -2px #FEEAC5, 0 0 0 -1px #ff728b;
+  box-shadow: 0 0 0 -2px #FEEAC5, 0 0 0 -1px #ff728b;
+  border: none;
+  -webkit-transition: -webkit-box-shadow .3s;
+  transition: box-shadow .3s;
+  cursor: pointer;
+}
+.submit-btn:hover, .submit-btn:focus {
+  -webkit-box-shadow: 0 0 0 2px #FEEAC5, 0 0 0 4px #ff97aa;
+  box-shadow: 0 0 0 2px #FEEAC5, 0 0 0 4px #ff97aa;
+  -webkit-transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+  transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+  -webkit-animation: gelatine 0.5s 1;
+  animation: gelatine 0.5s 1;
+}
+.submit-btn:active{
+  background: #4ecdc4;
+  -webkit-transition-duration: 0;
+  transition-duration: 0;
+  -webkit-box-shadow: 0 0 0 2px #FEEAC5, 0 0 0 4px #fe4364;
+  box-shadow: 0 0 0 2px #FEEAC5, 0 0 0 4px #fe4364;
+}
+@keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
+@-webkit-keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
 }

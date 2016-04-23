@@ -4,30 +4,36 @@
         <meta charset="UTF-8">
 
         <link rel="stylesheet" type="text/css" href="css/login.css">
+         <script type="text/javascript" src="js/jquery.min.js"></script>
+
         <title>Walker-登录注册</title> 
     </head>
     <body>
 <!--         <div><img src="images/background"></div> -->
         <center>
-            <div class="con">
-                <div class="bg"><img src="images/bg.jpg"></div>
+            <div class="bg" id="bg"><img src="images/bg.jpg"></div>
+            <div class="con" id="con">
                 <div class="con_title">
-                    <span class="con_title_sp">欢迎登录Walker</span>
+                    <div class="logo"><img src="images/logo.png"></div>
                 </div>
                 <div class="con_tab">
-                    <span class="sign_in" >注册</span>
-                    <span class="log_in" >登录</span>
+                    <span class="sign_in" onclick="signin()">注&nbsp;册</span>
+                    <span class="log_in" onclick="login()">登&nbsp;录</span>
                 </div>
                 <div class="con_panel">
                     <div class="con_input">
                         <input type="text" placeholder="用户名"/>
                     </div>
                     <div class="con_input">
-                        <input type="text" placeholder="密码"/>
+                        <input type="password" placeholder="密码"/>
                     </div>
-                    <input type="submit" value="确    认" class="submit-btn"/>
+                    <div class="con_input" id="email">
+                        <input type="text" placeholder="邮箱"/>
+                    </div>
                 </div>
+                <input type="submit" value="确    认" class="submit-btn" id="button"/>
             </div>
         </center>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
